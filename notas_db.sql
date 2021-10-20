@@ -131,6 +131,7 @@ CREATE TABLE `notas`(
 `fecha_ult_mod` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 `descripcion` TEXT,
 `usuario_id` INT UNSIGNED NOT NULL,
+`canBeDeleted` TINYINT DEFAULT 1,
 PRIMARY KEY(`id`),
 KEY `usuario_id_foreign` (`usuario_id`),
 CONSTRAINT `usuario_id_foreign` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`)
